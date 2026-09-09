@@ -1,0 +1,459 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar{
+    height:70px;
+    width:100%;
+    background-color:#333;
+    color:#fff;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo{
+    padding-left: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.navbar > p{
+    display: none;
+}
+
+.navbar ul{
+    list-style-type:none;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    height:100%;
+    background-color:#333;
+    flex: 1;
+}
+.navbar ul li{
+    padding:10px;
+    cursor:pointer;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    border-bottom: 2px solid #fff;
+}
+
+#themeToggle{
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#themeToggle:hover{
+    background-color: #555;
+    transform: rotate(20deg);
+}
+
+#home{
+    background-color:#F5E6D3;
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#home h1{
+    font-size: 50px;
+}
+#home h2{
+    padding-top: 20px;
+    font-size: 30px;
+}
+#home button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+#home button:hover{
+    background-color: #555;
+    transform: translateY(-3px);
+}
+#home button:active{
+    background-color: #777;
+}
+.home-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#home p{
+    margin-top: 15px;
+    font-size: 20px;
+}
+#introText{
+    min-height: 30px;
+}
+#introText::after{
+    content: "|";
+    margin-left: 2px;
+    animation: blink 0.8s step-end infinite;
+}
+@keyframes blink{
+    50% { opacity: 0; }
+}
+.toast-msg{
+    font-size: 16px;
+    color: #2e7d32;
+    height: 20px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+.toast-msg.show{
+    opacity: 1;
+}
+#home ul li{
+    margin-top: 8px;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+#about{
+    background-color:#E8EEF2;
+    min-height:100vh;
+    text-align: center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+#about h2{
+    font-size: 50px;
+}
+#about p{
+    margin-top: 20px;
+    font-size: 20px;
+    width: 60%;
+    line-height: 40px;
+}
+#skills{
+    background-color:#f2f2f2;
+    min-height:100vh;
+    text-align: center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    padding: 40px 20px;
+}
+#skills h2{
+    font-size: 50px;
+}
+#skills h3{
+    margin-top: 20px;
+    font-size: 30px;
+}
+#skills ul{
+    margin-top: 10px;
+    font-size: 20px;
+    width: 100%;
+    line-height: 30px;
+}
+#skills ul li{
+    list-style-type: none;
+}
+.skillContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    gap: 50px;
+    margin-top: 30px;
+}
+.skill-cat{
+    background-color:#243447;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 8%;
+    width: 230px;
+    height: 230px;
+    box-shadow:0px 4px 10px rgba(0,0,0 ,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skill-cat:hover{
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.25);
+}
+#projects{
+    background-color: azure;
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+#projects h2{
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+
+#projInfo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    list-style-type: none;
+}
+
+.Proj{
+    background-color: #243447;
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+#projInfo a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.Proj:hover{
+    transform: translateY(-8px) scale(1.03);
+    background-color: #032b4d;
+    box-shadow: 0px 12px 20px rgba(0,0,0,0.3);
+}
+.Proj a{
+    color:white;
+    text-decoration:none;
+}
+.Proj a:hover{
+    text-decoration:underline;
+    text-decoration-thickness: 2px;
+}
+
+#contact {
+    background-color: #E8EEF2;
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+#contact h2{
+    font-size: 50px;
+    margin-bottom: 2rem;
+}
+#contact ul{
+    list-style-type: none;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+    align-items: center;
+}
+#contact li{
+    font-size: 1.2rem;
+}
+#contact li i{
+    margin-right: 8px;
+}
+#contact a{
+    text-decoration: none;
+    color:#2b71aa;
+    transform: translateY(0);
+    transition: color 0.3s ease, text-decoration 0.3s ease, transform 0.3s ease;
+}
+
+#contact a:hover {
+    color: #0a356b;
+    text-decoration: underline;
+    transform: translateY(-4px);
+}
+#footer{
+    background-color: #2e2525;
+    color: #E8EEF2;
+    text-align: center;
+    padding: 15px;
+}
+
+#backToTop{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    z-index: 999;
+}
+#backToTop.show{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+#backToTop:hover{
+    background-color: #555;
+}
+
+/* Dark mode */
+body.dark-mode{
+    background-color: #121212;
+    color: #eaeaea;
+}
+body.dark-mode #home{
+    background-color: #1e1a16;
+    color: #eaeaea;
+}
+body.dark-mode #about{
+    background-color: #1a2128;
+    color: #eaeaea;
+}
+body.dark-mode #skills{
+    background-color: #17181a;
+    color: #eaeaea;
+}
+body.dark-mode #projects{
+    background-color: #101a1e;
+    color: #eaeaea;
+}
+body.dark-mode #contact{
+    background-color: #1a2128;
+    color: #eaeaea;
+}
+body.dark-mode #contact a{
+    color: #8ec9f0;
+}
+body.dark-mode #contact a:hover{
+    color: #c3e4ff;
+}
+body.dark-mode .skill-cat,
+body.dark-mode .Proj{
+    background-color: #1c2b3a;
+}
+body.dark-mode #home button{
+    background-color: #555;
+}
+body.dark-mode #home button:hover{
+    background-color: #777;
+}
+
+@media (max-width:768px){
+    .navbar{
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 0;
+    }
+    .navbar ul{
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    #about p{
+        width: 85%;
+    }
+    #backToTop{
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width:421px) {
+    h1 {
+        font-size: 28px;
+    }
+    #home h2{
+        font-size: 20px;
+    }
+    .skill-cat {
+        width: 150px;
+        height: 150px;
+    }
+    .skill-cat h3{
+        font-size: 20px;
+    }
+    .Proj {
+        width: 140px;
+        height: 140px;
+        font-size: 14px;
+        padding: 10px;
+    }
+    .navbar {
+        margin-bottom: 20px;
+    }
+    #home #introText {
+        font-size: 15px;
+    }
+    #home #introText2{
+        font-size: 16px;
+    }
+    #contact h2, #about h2, #skills h2, #projects h2{
+        font-size: 32px;
+    }
+    .home-buttons{
+        flex-direction: column;
+        width: 100%;
+    }
+    #home button{
+        width: 100%;
+    }
+}
