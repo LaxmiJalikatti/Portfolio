@@ -82,7 +82,7 @@ This portfolio can be deployed using GitHub Pages.
 
 Your portfolio will be available at:
 
-https://username.github.io/Portfolio/
+https://Laxmijalikatti.github.io/Portfolio/
 
 ## 📬 Contact
 
