@@ -82,7 +82,7 @@ This portfolio can be deployed using GitHub Pages.
 
 Your portfolio will be available at:
 
-https://username.github.io/repository-name/
+https://username.github.io/Portfolio/
 
 ## 📬 Contact
 
